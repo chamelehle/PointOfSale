@@ -10,8 +10,9 @@ function addItem()
   }
   else
   {
-    newItem = Number(newItem);
-    runningTotal += newItem;
+
+    var c_newItem = Number(newItem);
+    runningTotal += c_newItem;
     var dollars = asCurrency(runningTotal);
     document.getElementById("subtotal").innerHTML = dollars;
     document.getElementById("price").innerHTML = "";
