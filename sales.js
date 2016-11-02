@@ -21,12 +21,12 @@ function addItem()
   }
   function calculateReceipt()
   {
-    var receiptSubtotal = Number("preTax");
+    var receiptSubtotal = Number(preTax);
     var receiptTax = receiptSubtotal * 0.075;
     var receiptTotal = receiptSubtotal + receiptTax;
-    document.getElementById("tax").innerHTML = receiptTax;
-    document.getElementById("sub").innerHTML = receiptSubtotal;
-    document.getElementById("total").innerHTML = receiptTotal;
+    document.getElementById("tax").innerHTML = asCurrency(receiptTax);
+    document.getElementById("sub").innerHTML = asCurrency(receiptSubtotal);
+    document.getElementById("total").innerHTML = asCurrency(receiptTotal);
   }
   //IF newItem is not a number
   // THEN show an alert: "Enter price as a number"
