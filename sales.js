@@ -19,6 +19,15 @@ function addItem()
     setCookie("preTax", runningTotal, 3);
 
   }
+  function calculateReceipt()
+  {
+    var receiptSubtotal = Number(preTax);
+    var receiptTax = receiptSubtotal * 0.075;
+    var receiptTotal = receiptSubtotal + receiptTax;
+    document.getElementById("tax").innerHTML = receiptTax;
+    document.getElementById("sub").innerHTML = receiptSubtotal;
+    document.getElementById("total").innerHTML = receiptTotal;
+  }
   //IF newItem is not a number
   // THEN show an alert: "Enter price as a number"
   //OTHERWISE,
