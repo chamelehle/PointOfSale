@@ -21,7 +21,7 @@ function addItem()
   }
   function calculateReceipt()
   {
-    var receiptSubtotal = Number(preTax);
+    var receiptSubtotal = Number("preTax");
     var receiptTax = receiptSubtotal * 0.075;
     var receiptTotal = receiptSubtotal + receiptTax;
     document.getElementById("tax").innerHTML = receiptTax;
